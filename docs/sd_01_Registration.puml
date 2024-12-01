@@ -9,7 +9,7 @@
     reg_form -> reg_script: POST запрос с данными (username, password)
     activate reg_script
 
-    reg_script -> db: Проверка сущестования
+    reg_script -> db: Проверка существования
     activate db
     db --> reg_script: Результат проверки (существует/не существует)
     deactivate db
