@@ -1,6 +1,6 @@
 @startuml
     actor "Клиент" as user
-    participant "FE. ЭФ регистрации" as reg_form
+    participant "FE. ЭФ Регистрация" as reg_form
     participant "BE. Рег.скрипт" as reg_script
     database "DB. База данных" as db
 
@@ -9,17 +9,17 @@
     reg_form -> reg_script: POST запрос с данными (username, password)
     activate reg_script
 
-    reg_script -> db: Проверка существующих пользователей
+    reg_script -> db: Проверка сущестования
     activate db
     db --> reg_script: Результат проверки (существует/не существует)
     deactivate db
 
-    alt Пользователь не существует
-        reg_script -> db: Вставка нового пользователя (username, hashed_password)
+    alt Пользователь добавлен
+        reg_script -> db: Вставка пользователя (username, password)
         db --> reg_script: Успешная вставка
         reg_script --> reg_form: Регистрация [Да]
         reg_form --> user: Сообщение о регистрации
-    else Пользователь существует
+    else Пользователь не добавлен
         reg_script --> reg_form : Регистрация [Нет]
         reg_form --> user: Сообщение [Ошибка]: пользователь существует
     end
