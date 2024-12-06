@@ -21,10 +21,16 @@ for module in modules_list:
     imported_module = importlib.import_module(module)
 #    importlib.reload(imported_module)
     imported_modules[module] = imported_module
+print(imported_modules)
 
 gc = imported_modules['git_com']
 test = imported_modules['test_my']
+code = imported_modules['code_my']
 test.test()
 
-print("Конец")
+base_url=code.base_url #run_app()
+print(base_url)
+
 #'''
+print("Конец")
+
