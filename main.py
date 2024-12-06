@@ -30,6 +30,7 @@ test.test()
 
 base_url=code.base_url #run_app()
 print(base_url)
+code.run_app()
 
 #'''
 print("Конец")
