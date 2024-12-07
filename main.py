@@ -2,7 +2,6 @@ import importlib
 import os
 import sys
 
-#config = importlib.import_module('config')
 directory_path = os.getcwd()
 repo_name = os.path.basename(directory_path)
 repo_up = os.path.dirname(directory_path)
@@ -35,4 +34,3 @@ code.run_app()
 
 #'''
 print("Конец")
-
