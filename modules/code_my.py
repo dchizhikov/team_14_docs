@@ -5,7 +5,7 @@ from flask import Flask, render_template_string, request, session
 from modules.utils import get_auth_form, get_favicon, load_html_from_file, welcome_page 
 
 # Прокси-порт для доступа к приложению
-base_url = sys.argv[3]
+base_url = sys.argv[2]
 repo_name = 'webApp_Auth'#config.repo_name
 
 def run_app():

@@ -2,9 +2,10 @@ import importlib
 import os
 import sys
 
-config = importlib.import_module('config')
-repo_up = config.repo_up
-repo_name = config.repo_name
+#config = importlib.import_module('config')
+directory_path = os.getcwd()
+repo_name = os.path.basename(directory_path)
+repo_up = os.path.dirname(directory_path)
 folder_modules = '/modules/'
 folder_modules_path = repo_up+'/'+repo_name+folder_modules
 
