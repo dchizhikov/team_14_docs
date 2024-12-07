@@ -14,7 +14,7 @@ def run_app():
       "user1": "password1",
       "user2": "password2"
   }
-  html_file = '/content/webApp_Auth/html/base_template.html'
+  html_file = '/work/webApp_Auth/html/base_template.html'
   base_template = load_html_from_file(html_file)
 
   @app.route('/favicon.ico')
@@ -50,4 +50,4 @@ def run_app():
       session.pop('username', None)  # Удаляем пользователя из сессии
       return index()  # Возвращаем на главную страницу
 
-  app.run()
+  app.run(host='0.0.0.0', port=8080)

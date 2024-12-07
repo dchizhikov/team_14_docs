@@ -18,7 +18,7 @@ def get_favicon():
 
 def get_auth_form(error=None):
   # Путь к HTML-файлу
-  html_file = '/content/webApp_Auth/html/auth_form.html'
+  html_file = '/work/webApp_Auth/html/auth_form.html'
 
   # Загрузка HTML-кода из файла
   form_html = load_html_from_file(html_file)
